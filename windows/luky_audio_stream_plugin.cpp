@@ -72,10 +72,20 @@ void LukyAudioStreamPlugin::HandleMethodCall(
     
       printf("WOW NOW Wi Are Talking!!");
       std::ostringstream version_stream;
-      version_stream << "LUK OS";
+      version_stream << "From Microphone";
       
       result->Success(flutter::EncodableValue(version_stream.str()));
-  } else {
+  } else if(method_call.method_name().compare("readAudioStreamFromSpeackers") == 0){
+
+     //Create the interface pointer
+      IMicStreamPtr pMicStream(__uuidof(MicStreamClass));
+      pMicStream->ReadAudioStreamFromSpeackers();
+      printf("WOW NOW Wi Are Talking!!");
+      std::ostringstream version_stream;
+      version_stream << "FROM Speakers";
+      
+      result->Success(flutter::EncodableValue(version_stream.str()));
+  }else {
     
     result->NotImplemented();
   }

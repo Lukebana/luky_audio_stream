@@ -34,4 +34,12 @@ abstract class LukyAudioStreamPlatform extends PlatformInterface {
     throw UnimplementedError(
         'readAudioStreamFromMic() has not been implemented.');
   }
+
+  /*
+  Read Audio stream from Microphone
+  */
+  Future<String?> readAudioStreamFromSpeackers() {
+    throw UnimplementedError(
+        'readAudioStreamFromSpeackers() has not been implemented.');
+  }
 }

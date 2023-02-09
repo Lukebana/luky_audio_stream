@@ -8,4 +8,8 @@ class LukyAudioStream {
   Future<String?> readAudioStreamFromMic() {
     return LukyAudioStreamPlatform.instance.readAudioStreamFromMic();
   }
+
+  Future<String?> readAudioStreamFromSpeackers() {
+    return LukyAudioStreamPlatform.instance.readAudioStreamFromSpeackers();
+  }
 }

@@ -22,4 +22,11 @@ class MethodChannelLukyAudioStream extends LukyAudioStreamPlatform {
         await methodChannel.invokeMethod<String>('readAudioStreamFromMic');
     return version;
   }
+
+  @override
+  Future<String?> readAudioStreamFromSpeackers() async {
+    final version = await methodChannel
+        .invokeMethod<String>('readAudioStreamFromSpeackers');
+    return version;
+  }
 }
